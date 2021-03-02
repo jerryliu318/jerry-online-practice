@@ -1,0 +1,45 @@
+{
+  "name": "jerry-online-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "./node_modules/.bin/eslint js/**/*.js",
+    "build": "./node_modules/.bin/webpack",
+    "local": "./node_modules/.bin/webpack serve"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.21.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "html-webpack-plugin": "^5.2.0",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "regenerator-runtime": "^0.13.7",
+    "styled-components": "^5.2.1"
+  }
+}

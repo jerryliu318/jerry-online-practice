@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - cd infinite_scroll_by_react
+      - npm install
+  pre_build:
+    commands:
+      - npm run eslint
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 mv dist s3://infinite-scroll-by-react/ --recursive
+# Include only the files required for your application to run.
+# Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
+# used only for building and testing.
+# ExpressJS apps will need other artifact directories included (bin/*, public/*, routes/*, views/* etc).
+# artifacts:
+#   files:
+#     - app.js
+#     - index.html
+#     - package.json
+#     - node_modules/async/*
+#     - node_modules/lodash/*
